@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我写的走马灯</title>
+</head>
+<style>
+     * {
+        padding: 0;
+        margin: 0;
+      }
+    .img{
+        width:200px;
+        height:200px;
+    }
+    .box{
+        position: relative;
+        margin: 100px auto;
+        width:600px;
+        height:200px;
+        border: 2px solid black;
+        border-radius: 10%;
+        box-shadow: 2px 5px 15px;
+        overflow: hidden;
+    }
+    .box ul{
+        width:2300px;
+        list-style: none;
+        animation: move 10s linear infinite backwards;
+    }
+    li{
+        float:left;
+    }
+    @keyframes move{
+        to{
+            transform: translateX(-1400px);
+            /* 注意是负的，要回走 ,而且是7张，不是10张的长度*/
+        }
+    }
+    .box:hover ul{
+        animation-play-state: paused;
+    }
+</style>
+<body>
+    <div class="box">
+        <ul>
+            <a href="https://www.bilibili.com/video/BV1FW4y1r79Q?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/a.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1uW4y1y7WE?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/b.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV12U4y1R72G?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/c.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1x34y1E77j?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/d.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1pZ4y1477h?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/e.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1rA4y1S7KL?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/g.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1bU4y1273p?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/f.jpg" alt=""></li>
+            </a>
+
+            <!-- 因为无缝动画就是得让人无法识别开头，把开头三个产品图复制在尾部
+            因为显示区域就是三个产品图 -->
+
+            <a href="https://www.bilibili.com/video/BV1FW4y1r79Q?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/a.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1uW4y1y7WE?spm_id_from=333.999.0.0&vd_source=a75f23efbd99561a9f2777d0a1bbebb1">
+                <li><img class="img" src="./images/b.jpg" alt=""></li>
+            </a>
+            <a href="https://www.bilibili.com/video/BV12U4y1R72G?spm_id_from=333.999.0.0">
+                <li><img class="img" src="./images/c.jpg" alt=""></li>
+            </a>
+        </ul>
+    </div>
+</body>
+</html>
